@@ -1,0 +1,11 @@
+Instruction: Read the referenced files. Generate one read-only SQLite SELECT query for each question in the dataset, using the schema. Use only the question column, not the result column.
+
+Context:
+@Week_03_Prompting/Assignments/Task_2/data/restaurants-schema.csv
+
+Input:
+@Week_03_Prompting/Assignments/Task_2/data/restaurants_dataset.csv
+
+Output: Return valid CSV only, with the header:
+question,predicted_sql
+Each SQL query must select LOCATION.HOUSE_NUMBER followed by RESTAURANT.NAME. No prose or Markdown code fences.
