@@ -1,0 +1,187 @@
+{
+  "status": "needs_attention",
+  "sources": [
+    "conversations/conv_pines014_material_volume.eml"
+  ],
+  "priority_scale": {
+    "High": "Essential functionality, safety, compliance, or explicitly high priority.",
+    "Medium": "Important supporting functionality.",
+    "Low": "Useful enhancement or explicitly optional functionality."
+  },
+  "requirements": [
+    {
+      "name": "Report library material volume",
+      "explanation": "The system should report the volume of material for a specified library at any point in time, including the current volume. Count all items whose location matches that library, including new acquisitions, checked-in items, and checked-out items. Show separate counts for new acquisitions, checked-in items, and checked-out items, along with a total.",
+      "priority": "Medium",
+      "priority_basis": "Inferred",
+      "priority_reason": "The summary calls this a “key requirement,” but does not assign a priority level. Medium is inferred for this central reporting capability; the wording does not establish an explicit High priority.",
+      "candidate_ids": [
+        "CAND-0001",
+        "CAND-0002",
+        "CAND-0003",
+        "CAND-0004",
+        "CAND-0005",
+        "CAND-0006"
+      ],
+      "source_ids": [
+        "conversations/conv_pines014_material_volume.eml"
+      ],
+      "evidence": [
+        {
+          "candidate_id": "CAND-0001",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "The system should provide the ability to report on the volume of material\nin a given library at any point in time"
+        },
+        {
+          "candidate_id": "CAND-0002",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "Counts all items with a location = your library"
+        },
+        {
+          "candidate_id": "CAND-0003",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "The system should provide the ability to report on the volume of material\nin a given library at any point in time, based on:\n- New acquisitions"
+        },
+        {
+          "candidate_id": "CAND-0004",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "- Items on the shelf (checked in)"
+        },
+        {
+          "candidate_id": "CAND-0005",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "- Items out in circulation (checked out)"
+        },
+        {
+          "candidate_id": "CAND-0006",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "I think Maria is asking for all three counts separately plus a total. That\nmakes sense for collection management."
+        }
+      ]
+    },
+    {
+      "name": "Break down volume by customizable categories",
+      "explanation": "The report should provide category breakdowns, including examples such as total items, adult fiction, and board books. Libraries should be able to customize categories to suit their needs; examples discussed include fiction/non-fiction and format. Show the number of holds for each applicable category.",
+      "priority": "Medium",
+      "priority_basis": "Inferred",
+      "priority_reason": "The source describes category breakdowns as important and says different libraries may want different breakdowns, but assigns no priority level. Medium is inferred for this supporting reporting capability.",
+      "candidate_ids": [
+        "CAND-0007",
+        "CAND-0008",
+        "CAND-0009"
+      ],
+      "source_ids": [
+        "conversations/conv_pines014_material_volume.eml"
+      ],
+      "evidence": [
+        {
+          "candidate_id": "CAND-0007",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "The report should allow breaking down volume in categories such as:\n- Total items in library\n- Number of holds\n- Number of adult fiction\n- Number of board books\n- Other customizable categories"
+        },
+        {
+          "candidate_id": "CAND-0008",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "Can we make the categories customizable? Different libraries\nmight want different breakdowns."
+        },
+        {
+          "candidate_id": "CAND-0009",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "Shows breakdowns with holds count per category"
+        }
+      ]
+    },
+    {
+      "name": "Support historical volume reporting",
+      "explanation": "The system should support date-filtered volume reports for points in the past and comparisons across historical periods. Use the tracked acquisition date to report volume changes over time, including how much volume was added within a selected period. Date windows may include examples proposed in the discussion: the last 30, 60, or 90 days.",
+      "priority": "Low",
+      "priority_basis": "Inferred",
+      "priority_reason": "The source describes historical comparisons as useful and recent-period additions as helpful, but assigns no priority level. Low is inferred because this is useful additional analysis rather than the central volume-reporting capability.",
+      "candidate_ids": [
+        "CAND-0010",
+        "CAND-0011",
+        "CAND-0012",
+        "CAND-0013"
+      ],
+      "source_ids": [
+        "conversations/conv_pines014_material_volume.eml"
+      ],
+      "evidence": [
+        {
+          "candidate_id": "CAND-0010",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "We can also add date filters - volume at any point in time, not just\ncurrent."
+        },
+        {
+          "candidate_id": "CAND-0011",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "This would be useful for historical comparisons."
+        },
+        {
+          "candidate_id": "CAND-0012",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "Yes, the database tracks acquisition date for items. We can definitely\nbuild reports that show volume changes over time."
+        },
+        {
+          "candidate_id": "CAND-0013",
+          "source_id": "conversations/conv_pines014_material_volume.eml",
+          "quote": "It would\nbe helpful to see how much volume has been added in the last 30/60/90 days."
+        }
+      ]
+    }
+  ],
+  "blacklist": [],
+  "unresolved_issues": [],
+  "review": {
+    "approved": false,
+    "summary": "The draft requirements broadly match the source discussion (material volume by library, broken out by acquisition/shelf/checked-out, category breakdowns with holds, and historical/date-based views using acquisition date). However, there are a couple of evidence/semantic gaps: (1) “Include new acquisitions” and “checked-in/checked-out components” are implied for “volume at any point in time,” but the draft’s wording doesn’t clarify how “new acquisitions” are represented at a historical timestamp; (2) the draft introduces “priority = Medium/Low” only as inferred (which is OK), but one priority rationale should be tightened to avoid implying a source-assigned priority. Also, one minor inconsistency: the original text says “Maybe other categories too,” which is softer than a concrete category requirement; the draft’s “support customizable categories” mostly covers this, but the overall requirement language is a bit stronger than the source’s optionality. No blacklist/unresolved issues remain.",
+    "issues": [
+      "CAND-0012 / CAND-0013 / REQ-3 (\"Support historical volume reporting\") — Missing clarification on historical semantics for “new acquisitions.” The source says the report can be “volume at any point in time” and that “the database tracks acquisition date” for “volume changes over time,” but it doesn’t specify how “New acquisitions” should be calculated for a historical timestamp (e.g., acquired on/before the timestamp, and/or “added since last report,” or filtered to a selected window). Update the draft to explicitly define how “new acquisitions” component is derived when the report is for a past point in time (and whether it uses acquisition-date <= timestamp vs. a lookback window).",
+      "REQ-1 (\"Report library material volume\") — Strength of wording vs source optionality for component separation. The source indicates all three counts separately plus a total “makes sense,” but doesn’t explicitly require that the report always show all three components separately for every report request. If separation is intended to be mandatory, keep it; if it’s a configurable output option, adjust the wording to reflect that it was requested as needed for collection management rather than strictly required in all cases.",
+      "REQ-2 (\"Break down volume by customizable categories\") — Evidence covers customizable breakdowns and holds by category, but the “examples” are not exhaustive (“Maybe other categories too”). The requirement currently reads like a general capability, but ensure it doesn’t over-constrain the categories themselves. Refine to indicate the system supports user-defined categories/attributes and includes the mentioned examples as defaults rather than implying those categories must always exist."
+    ],
+    "unresolved_issues": [],
+    "revision": 2
+  },
+  "review_history": [
+    {
+      "approved": false,
+      "summary": "Overall the draft captures the main intent from the 2009 volume-reporting discussion (point-in-time volume by library; include new acquisitions, checked-in, checked-out; category breakdown; customizable categories; holds; historical/date filtering; use acquisition date; recent windows). However, there are a few notable gaps/overreach items: missing source-backed details about “number of holds” semantics, an omitted candidate/request (customizable categories alongside specific examples) from the requirements mapping, and some priority assignments that are not clearly supported by explicit source priority statements (priority levels are mostly inferred, but the mapping is inconsistent across requirements).",
+      "issues": [
+        "Requirement ‘Report library material volume’ (requirements[0]) has priority set to High with priority_basis=Inferred, but the requirement doesn’t show evidence that a specific priority level was actually assigned anywhere in the source—only that it is called a “key requirement.” Fix: keep High only if your process explicitly maps “key requirement” -> High; otherwise lower to Medium/Low or explicitly relabel as Inferred-to-High with a clearer rationale consistent with your priority policy (and ensure it’s consistent with how you treated other items).",
+        "Requirements[0] candidate_ids omit CAND-0007 (adult fiction/board books/etc examples are split across candidates 0007/0008/0009, but the requirement’s text claims holds and category examples are part of the core requirement). Problem: the requirement text is broader than the candidate evidence list; evidence does not include the “other categories”/examples for this requirement, only date/status/location pieces. Fix: either add the missing category-related candidate IDs (CAND-0007, CAND-0009, and likely CAND-0008) to requirements[0] *or* narrow the requirement explanation to only what is supported by the listed candidate_ids.",
+        "Potential unsupported modeling of “holds” within the core library volume requirement: the source distinguishes category breakdowns and specifically mentions “Number of holds” as a category metric, but the combined requirement (requirements[0]) includes “Provide separate counts for new acquisitions, checked-in items, and checked-out items, along with a total.” That’s supported; however the requirement explanation for requirements[0] does not explicitly state how holds relate to the total/status counts. Fix: clarify separation/relationship between status-based counts (acquired/checked in/checked out) and holds counts (category breakdown metric) so the draft doesn’t imply holds are part of the same total unless the source says so.",
+        "Requirements ‘Break down volume by customizable categories’ (requirements[1]) includes candidate_ids [CAND-0007, CAND-0008, CAND-0009] but does not incorporate the “fiction/non-fiction, format, etc.” wording beyond what’s implied. While CAND-0008 mentions different breakdowns, the “fiction/non-fiction, format” examples are mentioned in Robert’s message (“Groups by categories (fiction/non-fiction, format, etc.)”). Fix: add a candidate/evidence entry tied to the “fiction/non-fiction, format” example or extend the evidence trace by ensuring one of the included candidates explicitly covers that source text (currently CAND-0008 only quotes customization generally, not the specific examples).",
+        "Requirements ‘Report historical volume changes’ (requirements[2]) uses candidate_ids including CAND-0011 (historical comparisons), CAND-0012 (acquisition date), and CAND-0013 (30/60/90 day). Minor trace gap: requirements[2] says “support comparisons across historical points” and “Reports should support showing additions over recent periods,” but the source says “useful for historical comparisons” and “build reports that show volume changes over time” plus the last 30/60/90 suggestion. That is mostly supported, but the draft doesn’t explicitly cite the “volume at any point in time, not just current” statement in this requirement (it appears only in requirements[0] via CAND-0010). Fix: consider whether the point-in-time filter is part of historical changes; if so, ensure CAND-0010 is included here too or adjust the requirement wording to avoid implying it’s covered in requirements[2] when it’s only supported by requirements[0]."
+      ],
+      "unresolved_issues": [],
+      "revision": 0
+    },
+    {
+      "approved": false,
+      "summary": "Most of the draft requirements correctly reflect the 2009 volume reporting discussion: reporting volume for a library at any point in time (including checked-in/out), category breakdowns with customizable categories, holds counts, and date-based/historical reporting using acquisition date. However, several details are either missing, slightly mis-specified, or not fully evidenced—especially around “holds” vs item counts, the explicit need for separate acquisition/checked-in/checked-out counts, and the origin of the “priority: Medium” assignments (which are currently treated as inferred but still may be overconfident).",
+      "issues": [
+        "[REQ-1 / candidates CAND-0001, CAND-0002, CAND-0003, CAND-0004, CAND-0005, CAND-0006, CAND-0010] Missing explicit inclusion of “holds” as part of the status/total clarification. The email requests “number of holds” in the category breakdown, but REQ-1’s explanation says status counts are “distinct from holds counts in the category breakdown.” The draft asserts this separation as a requirement even though the source text doesn’t explicitly state that holds must be treated as a separate measure versus integrated into any totals. Fix: either (a) remove/soften that “distinct from holds” statement in REQ-1, or (b) add an explicit evidence-backed requirement that holds are shown separately (which is currently only strongly supported at the category level in CAND-0009, not in the status/total requirement).",
+        "[REQ-1 / candidates CAND-0001..CAND-0006] Potential semantic duplication/unclear scope between REQ-1’s “new acquisitions / checked-in / checked-out” and CAND-0006 “Show separate status counts and a total.” REQ-1 includes “Show separate counts for those three groups and a total,” but it is unclear whether this is meant to be distinct from the separate “category breakdown” requirement or if it duplicates the same structuring idea. While both are consistent with “all three counts separately plus a total,” the draft’s mapping bundles CAND-0010 (date filters) into REQ-1 and leaves category/holds to REQ-2; this is likely fine, but the draft should ensure REQ-1 doesn’t inadvertently combine unrelated things (e.g., date filtering) into the status/total concept. Fix: clarify in the requirement wording/explanation that REQ-1’s “separate counts + total” concern acquisition vs checked-in vs checked-out, while REQ-2 covers category breakdown (including holds).",
+        "[REQ-2 / candidates CAND-0007, CAND-0008, CAND-0009] “Show holds counts by category as a separate category measure” is stated as a requirement but is not fully supported. The source says “Number of holds” and also “Shows breakdowns with holds count per category.” That supports holds-by-category, but REQ-2 claims it must be “a separate category measure, not as part of the total.” The “not as part of the total” part is not explicitly stated in the email. Fix: remove the “not as part of the total” constraint unless you can trace it to the source; keep holds as “included per category,” without asserting how totals must treat holds.",
+        "[REQ-3 (Report historical volume changes) / candidates CAND-0011, CAND-0012, CAND-0013] Evidence gap for “recent-addition views using proposed time windows such as the last 30/60/90 days.” You include this in REQ-3 (and CAND-0013), but REQ-3 also broadly states “Support recent-addition views” and “historical comparisons.” Historical comparisons are supported (CAND-0011), but “recent-addition views” is more specific; the email only says “helpful to see how much volume has been added in the last 30/60/90 days” and does not describe it as a formal separate view type. Fix: tighten REQ-3 to state the system supports filtering by acquisition date/time windows (e.g., last 30/60/90 days) rather than implying a dedicated ‘recent-addition view’ feature.",
+        "[Priority assignments across requirements / requirements: both REQ-1, REQ-2, REQ-3] Priority reason is partially speculative. The draft sets “priority: Medium” for all requirements and labels basis as “Inferred,” which is directionally correct because the email says “This will be tracked as a key requirement” but does not assign a numeric priority level. However, REQ-2 and REQ-3 are not backed by any “key requirement” phrasing in the email. The draft still assigns “Medium” as if generally important but doesn’t justify that as inferred beyond “important.” Fix: either (a) reduce priority certainty (e.g., keep Medium but adjust priority_reason to explicitly reference only the “important” wording and lack of explicit priority), or (b) change REQ-2/REQ-3 priority to Low/unspecified if your framework allows only High where explicitly required. Ensure every priority has explicit Inferred labeling (including that “Medium” itself is inferred).",
+        "[General traceability] Candidate coverage vs source: “Other categories too” is mentioned by Susansexton-cooley (“Maybe other categories too”), and “fiction/non-fiction, format, etc.” is mentioned by Robert. The draft covers customizable categories generally but doesn’t ensure that the vocabulary “fiction/non-fiction” and “format” appear as examples in the category breakdown requirement/explanation (it does include fiction/non-fiction as examples in CAND-0008’s explanation, but ensure this is present consistently in the requirements section evidence/explanation). Fix: ensure REQ-2 explanation/evidence consistently reflects these examples so the requirement is clearly grounded in source phrasing/examples."
+      ],
+      "unresolved_issues": [],
+      "revision": 1
+    },
+    {
+      "approved": false,
+      "summary": "The draft requirements broadly match the source discussion (material volume by library, broken out by acquisition/shelf/checked-out, category breakdowns with holds, and historical/date-based views using acquisition date). However, there are a couple of evidence/semantic gaps: (1) “Include new acquisitions” and “checked-in/checked-out components” are implied for “volume at any point in time,” but the draft’s wording doesn’t clarify how “new acquisitions” are represented at a historical timestamp; (2) the draft introduces “priority = Medium/Low” only as inferred (which is OK), but one priority rationale should be tightened to avoid implying a source-assigned priority. Also, one minor inconsistency: the original text says “Maybe other categories too,” which is softer than a concrete category requirement; the draft’s “support customizable categories” mostly covers this, but the overall requirement language is a bit stronger than the source’s optionality. No blacklist/unresolved issues remain.",
+      "issues": [
+        "CAND-0012 / CAND-0013 / REQ-3 (\"Support historical volume reporting\") — Missing clarification on historical semantics for “new acquisitions.” The source says the report can be “volume at any point in time” and that “the database tracks acquisition date” for “volume changes over time,” but it doesn’t specify how “New acquisitions” should be calculated for a historical timestamp (e.g., acquired on/before the timestamp, and/or “added since last report,” or filtered to a selected window). Update the draft to explicitly define how “new acquisitions” component is derived when the report is for a past point in time (and whether it uses acquisition-date <= timestamp vs. a lookback window).",
+        "REQ-1 (\"Report library material volume\") — Strength of wording vs source optionality for component separation. The source indicates all three counts separately plus a total “makes sense,” but doesn’t explicitly require that the report always show all three components separately for every report request. If separation is intended to be mandatory, keep it; if it’s a configurable output option, adjust the wording to reflect that it was requested as needed for collection management rather than strictly required in all cases.",
+        "REQ-2 (\"Break down volume by customizable categories\") — Evidence covers customizable breakdowns and holds by category, but the “examples” are not exhaustive (“Maybe other categories too”). The requirement currently reads like a general capability, but ensure it doesn’t over-constrain the categories themselves. Refine to indicate the system supports user-defined categories/attributes and includes the mentioned examples as defaults rather than implying those categories must always exist."
+      ],
+      "unresolved_issues": [],
+      "revision": 2
+    }
+  ],
+  "revision_limit": 2
+}
