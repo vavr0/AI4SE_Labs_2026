@@ -221,3 +221,7 @@ __marimo__/
 
 # macOS Finder metadata
 .DS_Store
+
+# Week 4 local intermediate outputs
+/Week_04_Requirements/Task_1/candidates.json
+/Week_04_Requirements/Task_1/refined_requirements.json
