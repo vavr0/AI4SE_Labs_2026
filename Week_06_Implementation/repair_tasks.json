@@ -1,0 +1,14 @@
+[
+  {
+    "file": "playground/playground/orders.py",
+    "class": "OrderLog",
+    "method": "by_status",
+    "docstring": "Yield orders whose status matches status. Implement the original requested behavior and respect the supplied lazy-generator tests. Return a consistently indented Python method body only."
+  },
+  {
+    "file": "playground/playground/inventory.py",
+    "class": "InventoryLedger",
+    "method": "__contains__",
+    "docstring": "User-approved clarification resolving the original description/test conflict: follow the supplied test_contains_present_even_if_zero_on_hand_after_commit. A normalized SKU remains a member once recorded in the on-hand ledger, even when a full commit reduces its quantity to zero. Invalid/non-string inputs and valid but never-stocked SKUs are not members. Do not require positive remaining quantity, and do not change any tests."
+  }
+]

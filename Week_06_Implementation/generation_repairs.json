@@ -1,0 +1,102 @@
+{
+  "model": "gpt-5.4-nano",
+  "max_requests": 2,
+  "automatic_retries": 0,
+  "replace_existing": true,
+  "tasks_total": 2,
+  "complete": true,
+  "results": [
+    {
+      "file": "playground/playground/orders.py",
+      "class": "OrderLog",
+      "method": "by_status",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/orders.py:161-196",
+          "score": 0.6903475522994995
+        },
+        {
+          "id": "playground/tests/test_orders.py:321-413",
+          "score": 0.6279256343841553
+        },
+        {
+          "id": "playground/playground/orders.py:81-180",
+          "score": 0.5924018621444702
+        },
+        {
+          "id": "playground/playground/orders.py:1-100",
+          "score": 0.5895819664001465
+        },
+        {
+          "id": "playground/tests/test_simulation.py:161-260",
+          "score": 0.5879616737365723
+        }
+      ],
+      "usage": {
+        "input_tokens": 4223,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 55,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4278
+      },
+      "generated_body": "if not isinstance(status, OrderStatus):\n    raise TypeError(\"status must be OrderStatus\")\nfor order in list(self._orders):\n    if order.status is status:\n        yield order",
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/inventory.py",
+      "class": "InventoryLedger",
+      "method": "__contains__",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/tests/test_inventory.py:1-100",
+          "score": 0.7508037090301514
+        },
+        {
+          "id": "playground/tests/test_inventory.py:161-260",
+          "score": 0.7214760780334473
+        },
+        {
+          "id": "playground/playground/inventory.py:1-100",
+          "score": 0.7138884663581848
+        },
+        {
+          "id": "playground/tests/test_inventory.py:81-180",
+          "score": 0.6939521431922913
+        },
+        {
+          "id": "playground/tests/test_inventory.py:321-418",
+          "score": 0.693638265132904
+        }
+      ],
+      "usage": {
+        "input_tokens": 5254,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 74,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 5328
+      },
+      "generated_body": "if not isinstance(sku, str):\n    return False\ntry:\n    normalized = normalize_sku(sku)\nexcept ValueError:\n    return False\n# SKU is considered present if it has ever been stocked (key remains in _on_hand)\nreturn normalized in self._on_hand",
+      "status": "updated"
+    }
+  ]
+}

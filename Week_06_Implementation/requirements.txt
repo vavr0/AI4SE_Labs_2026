@@ -1,0 +1,6 @@
+numpy==1.26.4
+torch==2.14.1
+sentence-transformers==6.3.0
+transformers==5.20.2
+openai==3.51.0
+python-dotenv==1.2.4

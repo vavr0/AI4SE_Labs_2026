@@ -1,0 +1,461 @@
+{
+  "model": "gpt-5.4-nano",
+  "max_requests": 10,
+  "automatic_retries": 0,
+  "tasks_total": 10,
+  "complete": true,
+  "results": [
+    {
+      "file": "playground/playground/enums.py",
+      "class": "OrderStatus",
+      "method": "is_terminal",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/enums.py:1-57",
+          "score": 0.5223169326782227
+        },
+        {
+          "id": "playground/playground/orders.py:1-100",
+          "score": 0.5053896903991699
+        },
+        {
+          "id": "playground/playground/orders.py:161-196",
+          "score": 0.4409417510032654
+        },
+        {
+          "id": "playground/playground/orders.py:81-180",
+          "score": 0.4150020480155945
+        },
+        {
+          "id": "playground/tests/test_orders.py:1-100",
+          "score": 0.4118313789367676
+        }
+      ],
+      "usage": {
+        "input_tokens": 3526,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 27,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3553
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/inventory.py",
+      "class": "InventoryLedger",
+      "method": "__contains__",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/inventory.py:1-100",
+          "score": 0.684335470199585
+        },
+        {
+          "id": "playground/tests/test_inventory.py:1-100",
+          "score": 0.5940932035446167
+        },
+        {
+          "id": "playground/playground/inventory.py:81-155",
+          "score": 0.5790148973464966
+        },
+        {
+          "id": "playground/playground/exceptions.py:1-56",
+          "score": 0.5740100145339966
+        },
+        {
+          "id": "playground/tests/test_simulation.py:161-260",
+          "score": 0.4928872287273407
+        }
+      ],
+      "usage": {
+        "input_tokens": 4142,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 83,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4225
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/inventory.py",
+      "class": "Warehouse",
+      "method": "stock_report",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/inventory.py:1-100",
+          "score": 0.6272327899932861
+        },
+        {
+          "id": "playground/playground/inventory.py:81-155",
+          "score": 0.6082675457000732
+        },
+        {
+          "id": "playground/playground/simulation.py:161-213",
+          "score": 0.5965738296508789
+        },
+        {
+          "id": "playground/playground/simulation.py:81-180",
+          "score": 0.5387872457504272
+        },
+        {
+          "id": "playground/playground/__init__.py:1-49",
+          "score": 0.534438967704773
+        }
+      ],
+      "usage": {
+        "input_tokens": 3351,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3396
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/orders.py",
+      "class": "OrderStateMachine",
+      "method": "transition",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/orders.py:1-100",
+          "score": 0.5882240533828735
+        },
+        {
+          "id": "playground/tests/test_orders.py:1-100",
+          "score": 0.4945479929447174
+        },
+        {
+          "id": "playground/playground/orders.py:81-180",
+          "score": 0.4503591060638428
+        },
+        {
+          "id": "playground/tests/test_simulation.py:161-260",
+          "score": 0.4057500660419464
+        },
+        {
+          "id": "playground/playground/simulation.py:81-180",
+          "score": 0.3941282033920288
+        }
+      ],
+      "usage": {
+        "input_tokens": 4712,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 33,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4745
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/orders.py",
+      "class": "OrderLog",
+      "method": "by_status",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/orders.py:161-196",
+          "score": 0.7022279500961304
+        },
+        {
+          "id": "playground/playground/orders.py:1-100",
+          "score": 0.5945448875427246
+        },
+        {
+          "id": "playground/playground/orders.py:81-180",
+          "score": 0.5745099186897278
+        },
+        {
+          "id": "playground/tests/test_orders.py:321-413",
+          "score": 0.5569961071014404
+        },
+        {
+          "id": "playground/tests/test_simulation.py:161-260",
+          "score": 0.5170149207115173
+        }
+      ],
+      "usage": {
+        "input_tokens": 4204,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 52,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4256
+      },
+      "status": "failed",
+      "error_type": "IndentationError",
+      "reason": "unindent does not match any outer indentation level (<unknown>, line 4)"
+    },
+    {
+      "file": "playground/playground/models.py",
+      "class": "Customer",
+      "method": "can_afford",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/models.py:241-268",
+          "score": 0.7754294276237488
+        },
+        {
+          "id": "playground/playground/models.py:161-260",
+          "score": 0.585673451423645
+        },
+        {
+          "id": "playground/tests/test_models.py:401-497",
+          "score": 0.5711048245429993
+        },
+        {
+          "id": "playground/tests/test_models.py:321-420",
+          "score": 0.4926328957080841
+        },
+        {
+          "id": "playground/playground/pricing.py:1-68",
+          "score": 0.47957319021224976
+        }
+      ],
+      "usage": {
+        "input_tokens": 3876,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 45,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3921
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/orders.py",
+      "class": "Order",
+      "method": "__len__",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/orders.py:81-180",
+          "score": 0.6181901693344116
+        },
+        {
+          "id": "playground/playground/orders.py:161-196",
+          "score": 0.5761879682540894
+        },
+        {
+          "id": "playground/playground/orders.py:1-100",
+          "score": 0.5026808977127075
+        },
+        {
+          "id": "playground/tests/test_orders.py:161-260",
+          "score": 0.45781174302101135
+        },
+        {
+          "id": "playground/playground/simulation.py:1-100",
+          "score": 0.412788987159729
+        }
+      ],
+      "usage": {
+        "input_tokens": 4025,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 17,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4042
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/pricing.py",
+      "class": "BulkDiscountPricing",
+      "method": "price",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/pricing.py:1-68",
+          "score": 0.6970880627632141
+        },
+        {
+          "id": "playground/tests/test_pricing.py:81-168",
+          "score": 0.6819820404052734
+        },
+        {
+          "id": "playground/tests/test_pricing.py:1-100",
+          "score": 0.6048637628555298
+        },
+        {
+          "id": "playground/playground/models.py:81-180",
+          "score": 0.5241902470588684
+        },
+        {
+          "id": "playground/playground/simulation.py:1-100",
+          "score": 0.5173541307449341
+        }
+      ],
+      "usage": {
+        "input_tokens": 4400,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 71,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4471
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/events.py",
+      "class": "EventBus",
+      "method": "__contains__",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/events.py:1-54",
+          "score": 0.6564436554908752
+        },
+        {
+          "id": "playground/tests/test_events.py:1-100",
+          "score": 0.5048955678939819
+        },
+        {
+          "id": "playground/tests/test_events.py:81-177",
+          "score": 0.47296836972236633
+        },
+        {
+          "id": "playground/tests/test_package.py:1-74",
+          "score": 0.3690878450870514
+        },
+        {
+          "id": "playground/playground/enums.py:1-57",
+          "score": 0.3356103301048279
+        }
+      ],
+      "usage": {
+        "input_tokens": 3255,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 47,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3302
+      },
+      "status": "updated"
+    },
+    {
+      "file": "playground/playground/models.py",
+      "class": "Money",
+      "method": "__bool__",
+      "api_attempted": true,
+      "retrieved": [
+        {
+          "id": "playground/playground/models.py:1-100",
+          "score": 0.6860339641571045
+        },
+        {
+          "id": "playground/tests/test_models.py:1-100",
+          "score": 0.6589925289154053
+        },
+        {
+          "id": "playground/tests/test_pricing.py:1-100",
+          "score": 0.6176127195358276
+        },
+        {
+          "id": "playground/playground/pricing.py:1-68",
+          "score": 0.6113637089729309
+        },
+        {
+          "id": "playground/playground/simulation.py:1-100",
+          "score": 0.6045663952827454
+        }
+      ],
+      "usage": {
+        "input_tokens": 4258,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens_details": {
+            "ttl_12h_tokens": 0,
+            "ttl_30m_tokens": 0
+          }
+        },
+        "output_tokens": 19,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4277
+      },
+      "status": "updated"
+    }
+  ]
+}
